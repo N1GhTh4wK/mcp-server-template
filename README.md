@@ -47,4 +47,12 @@ Register with any MCP client (Claude Desktop, Claude Code, your own agent runtim
 
 Transport is stdio for simplicity. For HTTP deployments, put identity in front of the server (OAuth/OIDC) and keep per-client scopes — the tool layer should never be the only thing standing between a caller and an action.
 
-MIT licensed. Built by [Hermann Ballesteros](https://www.linkedin.com/in/hermannballesteros) — CXO & Partner, SLM Sistemas.
+## Related
+
+Three parts of the same problem — how much an agent is allowed to do, and how you prove it behaves:
+
+- **This repo** — the tool layer: validate, execute, redact.
+- [agent-credential-broker](https://github.com/N1GhTh4wK/agent-credential-broker) — bounding an agent's **authority**: it requests actions, never credentials.
+- [agent-eval-harness](https://github.com/N1GhTh4wK/agent-eval-harness) — bounding an agent's **judgement**: adversarial cases run before release.
+
+MIT licensed. Built by [Hermann Ballesteros](https://www.linkedin.com/in/hermannballesteros) — CXO &amp; Partner, SLM Sistemas.
